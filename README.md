@@ -29,9 +29,10 @@ For this project, the Windows 11 target VM utilized a NAT (Network Address Trans
 ​Alternative Considerations:
 
 ​Host-Only Network: Restricts traffic entirely to a private switch between the host and guest, which is optimal for completely isolated malware analysis or offline forensics, but blocks cloud SIEM telemetry streaming.
-​Bridged Adapter: Places the VM directly onto the physical local network (LAN), which was unnecessary here since the objective was securely tunneling agent data straight to a cloud SIEM instance rather than exposing the VM as an independent LAN node.
+
 
 ​Bridged Adapter: Places the VM directly onto the physical local network (LAN), which was unnecessary here since the objective was securely tunneling agent data straight to a cloud SIEM instance rather than exposing the VM as an independent LAN node.
+
 
 ​3. Host Configuration & Telemetry Engineering Details
 ​To overcome default Windows logging gaps where command-line arguments are omitted from raw process creation logs, the following configuration steps were applied to the target endpoint:
